@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_schedule">
+
+    <fragment
+        android:id="@+id/navigation_schedule"
+        android:name="rocks.mobileera.mobileera.fragments.ScheduleFragment"
+        android:label="@string/schedule"
+        tools:layout="@layout/fragment_schedule" >
+        <action
+            android:id="@+id/action_navigation_schedule_to_sessionFragment"
+            app:destination="@id/sessionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_speakers"
+        android:name="rocks.mobileera.mobileera.fragments.SpeakersFragment"
+        android:label="@string/speakers"
+        tools:layout="@layout/fragment_speakers" >
+        <action
+            android:id="@+id/action_navigation_speakers_to_speakerActivity"
+            app:destination="@id/speakerActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_venue"
+        android:name="rocks.mobileera.mobileera.fragments.VenueFragment"
+        android:label="@string/venue"
+        tools:layout="@layout/fragment_venue" />
+    <fragment
+        android:id="@+id/sessionFragment"
+        android:name="rocks.mobileera.mobileera.fragments.SessionFragment"
+        android:label=" "
+        tools:layout="@layout/fragment_session" >
+        <action
+            android:id="@+id/action_sessionFragment_to_speakerActivity"
+            app:destination="@id/speakerActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/speakerActivity"
+        android:name="rocks.mobileera.mobileera.SpeakerActivity"
+        android:label="activity_speaker"
+        tools:layout="@layout/activity_speaker" />
+</navigation>

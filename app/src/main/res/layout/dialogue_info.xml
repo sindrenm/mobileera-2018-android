@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/sponsorsTextView"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/sponsors"
+        android:textSize="16sp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/codTextView"
+        android:textSize="16sp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:paddingTop="8dp"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/cod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/mobileEraTeamTextView"
+        android:textSize="16sp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/mobile_era_team"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/contactUsTextView"
+        android:textSize="16sp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/contact_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/credentialsTextView"
+        android:layout_marginTop="24dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/creds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

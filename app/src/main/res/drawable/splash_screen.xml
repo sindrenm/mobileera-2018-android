@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+    <item android:drawable="@color/colorPrimary"/>
+    <item android:gravity="bottom|center_horizontal" android:bottom="72dp">
+        <bitmap
+            android:gravity="bottom|center_horizontal"
+            android:src="@drawable/mobile_era_wordmark"/>
+    </item>
+    <item android:gravity="center" android:bottom="36dp">
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/mobile_era_logo"/>
+    </item>
+</layer-list>

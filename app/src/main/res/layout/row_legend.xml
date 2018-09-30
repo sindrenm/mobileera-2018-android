@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:orientation="horizontal"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+
+    <TextView
+        android:textColor="@color/colorPrimaryText"
+        android:text="@string/room"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/colorOdin"
+        android:layout_width="4dp"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:textColor="@color/colorPrimaryText"
+        android:text="@string/odin"
+        android:layout_marginStart="4dp"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/colorFreyja"
+        android:layout_width="4dp"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:textColor="@color/colorPrimaryText"
+        android:text="@string/freyja"
+        android:layout_marginStart="4dp"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/colorThor"
+        android:layout_width="4dp"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:textColor="@color/colorPrimaryText"
+        android:text="@string/thor"
+        android:layout_marginStart="4dp"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

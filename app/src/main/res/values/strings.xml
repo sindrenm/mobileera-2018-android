@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Mobile Era</string>
+
+
+    <string name="workshops">Workshops</string>
+    <string name="day1">Day 1</string>
+    <string name="day2">Day 2</string>
+
+    <string name="speakers">Speakers</string>
+    <string name="schedule">Schedule</string>
+    <string name="venue">Venue</string>
+    <string name="venue_address">Felix Konferansesenter\nBryggetorget 3\n0250 Oslo</string>
+    <string name="party_venue">Party Venue</string>
+    <string name="party_venue_address">Beer Palace\nHolmens gate 3\n0250 Oslo</string>
+
+    <string name="room">Room:</string>
+    <string name="odin">Odin</string>
+    <string name="freyja">Freyja</string>
+    <string name="thor">Thor</string>
+    <string name="filter">Filter</string>
+    <string name="info">Info</string>
+    <string name="filter_ok">OK</string>
+    <string name="filter_clear">Clear Filters</string>
+    <string name="filter_show_only_favs">Show only favorite sessions?</string>
+
+    <string name="information">Information</string>
+    <string name="sponsors">Sponsors</string>
+    <string name="cod">Code of Conduct</string>
+    <string name="mobile_era_team">Mobile Era Team</string>
+    <string name="contact_us">Contact us</string>
+    <string name="creds">Developed with ❤️\nKonstantin Loginov (loginov.k@gmail.com)</string>
+</resources>

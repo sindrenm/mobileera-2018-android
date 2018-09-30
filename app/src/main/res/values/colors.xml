@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+
+    <color name="colorSeparator">#ECECEC</color>
+    <color name="colorFreyja">#78CADF</color>
+    <color name="colorOdin">#62B069</color>
+    <color name="colorPrimary">#2C58A1</color>
+    <color name="colorPrimaryText">#333333</color>
+    <color name="colorSecondaryText">#909B9B</color>
+    <color name="colorSelection">#F0F0F0</color>
+    <color name="colorSelectionDark">#CCCCCC</color>
+    <color name="colorThor">#C34A52</color>
+
+    <!-- all tags colors -->
+    <color name="colorAndroid">#a4c639</color>
+    <color name="colorAndroid_pressed">#738b28</color>
+    <color name="coloriOS">#5fc9f8</color>
+    <color name="coloriOS_pressed">#16b0f5</color>
+    <color name="colorCrossPlatform">#b38ef8</color>
+    <color name="colorCrossPlatform_pressed">#8346f4</color>
+    <color name="colorProductivity">#ff597c</color>
+    <color name="colorProductivity_pressed">#ff0d40</color>
+    <color name="colorMobileWeb">#8c887c</color>
+    <color name="colorMobileWeb_pressed">#646158</color>
+    <color name="colorSecurity">#454545</color>
+    <color name="colorSecurity_pressed">#1f1f1f</color>
+    <color name="colorIoT">#ff9e7c</color>
+    <color name="colorIoT_pressed">#ff6530</color>
+    <color name="colorAI">#f2d500</color>
+    <color name="colorAI_pressed">#a69200</color>
+    <color name="colorMachineLearning">#481ff0</color>
+    <color name="colorMachineLearning_pressed">#2e0cb6</color>
+    <color name="colorArchitecture">#fd9727</color>
+    <color name="colorArchitecture_pressed">#d67102</color>
+    <color name="colorBackend">#2b98f0</color>
+    <color name="colorBackend_pressed">#0e71c1</color>
+    <color name="colorCI">#cdda49</color>
+    <color name="colorCI_pressed">#a6b224</color>
+    <color name="colorReactNative">#000000</color>
+    <color name="colorReactNative_pressed">#333333</color>
+
+</resources>

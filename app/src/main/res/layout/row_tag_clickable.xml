@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tagTextView"
+    android:background="@drawable/selector_background_tag_android"
+    android:layout_marginEnd="8dp"
+    android:textColor="@android:color/white"
+    android:gravity="center"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:textSize="12sp"
+    android:fontFamily="sans-serif-medium"
+    android:layout_width="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:layout_height="24dp" />
