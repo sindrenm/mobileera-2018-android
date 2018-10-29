@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/tagTextView"
     android:background="@drawable/selector_background_tag_android"
     android:layout_marginEnd="8dp"
@@ -13,4 +14,5 @@
     android:layout_width="wrap_content"
     android:foreground="?android:attr/selectableItemBackground"
     android:clickable="true"
-    android:layout_height="24dp" />
+    android:layout_height="24dp"
+    tools:text="@sample/sessions.json/data/tag" />

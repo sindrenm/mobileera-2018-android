@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "title": "Android Development",
+      "room": "Odin",
+      "starResource": "@drawable/star_filled",
+      "tag": "Android",
+      "company": "Google",
+      "time": "Thu, November 1 / 09:00"
+    },
+    {
+      "title": "Swift 102",
+      "room": "Freyja",
+      "starResource": "@drawable/star_filled",
+      "tag": "iOS",
+      "company": "Apple",
+      "time": "Thu, November 1 / 11:00"
+    },
+    {
+      "title": "React Native: The Good, The Bad and The Ugly",
+      "room": "Thor",
+      "starResource": "@drawable/star_empty",
+      "tag": "Mobile Web",
+      "company": "Facebook",
+      "time": "Thu, November 2 / 13:00"
+    }
+  ]
+}
