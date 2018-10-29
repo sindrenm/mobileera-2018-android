@@ -100,8 +100,10 @@ class SessionViewHolder(
 
         tagsRecyclerView.adapter = TagsAdapter(session.tags, tagsListener)
 
-        val dividerItemDecoration = DividerItemDecoration(context, RecyclerView.VERTICAL)
-        dividerItemDecoration.setDrawable(context.resources.getDrawable(R.drawable.divirer_tags_horizontal))
+        val dividerItemDecoration = DividerItemDecoration(context, RecyclerView.VERTICAL).apply {
+            setDrawable(context.resources.getDrawable(R.drawable.divirer_tags_horizontal))
+        }
+
         tagsRecyclerView.addItemDecoration(dividerItemDecoration)
     }
 
