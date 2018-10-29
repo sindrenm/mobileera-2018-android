@@ -80,10 +80,12 @@ class SessionViewHolder(
             }
 
             tagsRecyclerView.visibility = View.VISIBLE
-            val layoutManager = FlexboxLayoutManager(context)
-            layoutManager.flexDirection = FlexDirection.ROW_REVERSE
-            layoutManager.justifyContent = JustifyContent.FLEX_END
-            tagsRecyclerView.layoutManager = layoutManager
+
+            tagsRecyclerView.layoutManager = FlexboxLayoutManager(context).apply {
+                flexDirection = FlexDirection.ROW_REVERSE
+                justifyContent = JustifyContent.FLEX_END
+            }
+
             tagsRecyclerView.adapter = TagsAdapter(tags, tagsListener)
 
             val dividerItemDecoration = DividerItemDecoration(context,
