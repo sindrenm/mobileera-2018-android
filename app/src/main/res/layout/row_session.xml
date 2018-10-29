@@ -32,12 +32,10 @@
             android:visibility="gone"
             android:layout_width="16dp"
             android:layout_height="16dp"
-
             android:textColor="@android:color/white"
             android:gravity="center"
             android:textSize="10sp"
             android:background="@drawable/background_rounded_dark"
-
             app:layout_constraintBottom_toBottomOf="@+id/avatarImageView"
             app:layout_constraintEnd_toEndOf="@+id/avatarImageView"
             tools:ignore="SmallSp" />
@@ -46,7 +44,6 @@
             android:id="@+id/titleTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-
             android:textColor="@color/colorPrimaryText"
             android:textSize="20sp"
             android:maxLines="5"
@@ -54,21 +51,18 @@
             android:ellipsize="end"
             android:fontFamily="sans-serif-light"
             android:textAppearance="?attr/textAppearanceListItem"
-
             android:layout_marginStart="16dp"
             android:layout_marginEnd="48dp"
             app:layout_constraintStart_toEndOf="@+id/avatarImageView"
             app:layout_constraintTop_toTopOf="@+id/avatarImageView"
             app:layout_constraintEnd_toEndOf="parent"
-
-            />
+            tools:text="@sample/sessions.json/data/title" />
 
         <LinearLayout
             android:id="@+id/speakersInfoLinearLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:textAppearance="?attr/textAppearanceListItem"
@@ -79,17 +73,16 @@
                 android:id="@+id/nameTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:textColor="@color/colorPrimaryText"
                 android:textSize="12sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:text="@tools:sample/full_names" />
 
             <View
                 android:id="@+id/separatorNameRoomView"
                 android:layout_width="1dp"
                 android:layout_height="12dp"
                 android:background="@color/colorSecondaryText"
-
                 android:layout_marginStart="4dp"
                 android:layout_gravity="center_vertical" />
 
@@ -100,7 +93,8 @@
                 android:layout_marginStart="4dp"
                 android:textColor="@color/colorSecondaryText"
                 android:textSize="12sp"
-                android:ellipsize="end" />
+                android:ellipsize="end"
+                tools:text="@sample/sessions.json/data/room" />
 
         </LinearLayout>
 
@@ -114,7 +108,10 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="12dp"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp"
+            tools:visibility="visible"
+            tools:listitem="@layout/row_tag_clickable"
+            tools:itemCount="1" />
 
         <ImageButton
             android:id="@+id/addToFavoritesButton"
@@ -126,7 +123,8 @@
             android:tint="@color/colorPrimary"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:src="@sample/sessions.json/data/starResource" />
 
     </android.support.constraint.ConstraintLayout>
 

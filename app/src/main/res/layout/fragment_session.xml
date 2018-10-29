@@ -18,7 +18,8 @@
             android:textColor="@color/colorPrimaryText"
             android:fontFamily="sans-serif-medium"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            tools:text="Android Development" />
 
         <TextView
             android:id="@+id/subtitleTextView"
@@ -28,15 +29,18 @@
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            tools:text="@sample/sessions.json/data/time" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/tagsRecyclerView"
             android:layout_marginTop="24dp"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
+            tools:itemCount="1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/row_tag_clickable" />
 
         <TextView
             android:id="@+id/sessionTextView"
@@ -47,7 +51,8 @@
             android:textSize="18sp"
             android:lineSpacingExtra="4dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            tools:text="@tools:sample/lorem[25]" />
 
         <include
             android:id="@+id/speaker1Layout"
@@ -60,7 +65,8 @@
             android:id="@+id/speaker2Layout"
             layout="@layout/row_speaker"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            tools:visibility="gone" />
     </LinearLayout>
 
 </ScrollView>

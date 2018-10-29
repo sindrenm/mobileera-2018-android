@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/timeTextView"
     android:layout_width="wrap_content"
     android:gravity="center_vertical"
@@ -9,4 +10,5 @@
     android:textStyle="bold"
     android:layout_marginStart="112dp"
     android:textColor="@color/colorSecondaryText"
-    android:textAppearance="?attr/textAppearanceListItem" />
+    android:textAppearance="?attr/textAppearanceListItem"
+    tools:text="09:00 – 10:00" />
