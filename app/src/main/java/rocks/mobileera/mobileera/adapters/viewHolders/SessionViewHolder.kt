@@ -45,8 +45,8 @@ class SessionViewHolder(val view: View,  private val tagsListener: TagCallback?,
     fun set(context: Context?, session: Session?, track: Int) {
         this.session = session
 
-        val context = context?.let { it } ?: return
-        val session = session?.let { it } ?: return
+        context ?: return
+        session ?: return
 
         titleTextView.text = (session.title + (if (session.lightning == true) " ⚡" else ""))
         nameTextView.text = session.speakersList?.joinToString(separator = ", ") { speaker -> speaker.name }
