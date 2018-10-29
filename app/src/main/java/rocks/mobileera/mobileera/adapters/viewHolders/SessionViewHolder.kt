@@ -1,7 +1,10 @@
 package rocks.mobileera.mobileera.adapters.viewHolders
 
 import android.content.Context
+import android.content.res.Resources
 import android.net.Uri
+import android.support.v4.content.res.ResourcesCompat
+import android.support.v4.graphics.drawable.DrawableCompat
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.widget.ImageButton
@@ -101,7 +104,13 @@ class SessionViewHolder(
         tagsRecyclerView.adapter = TagsAdapter(session.tags, tagsListener)
 
         val dividerItemDecoration = DividerItemDecoration(context, RecyclerView.VERTICAL).apply {
-            setDrawable(context.resources.getDrawable(R.drawable.divirer_tags_horizontal))
+            val divider = ResourcesCompat.getDrawable(
+                context.resources,
+                R.drawable.divirer_tags_horizontal,
+                context.theme
+            )
+
+            if (divider != null) setDrawable(divider)
         }
 
         tagsRecyclerView.addItemDecoration(dividerItemDecoration)
