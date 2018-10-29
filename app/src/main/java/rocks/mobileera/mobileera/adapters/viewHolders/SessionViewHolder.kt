@@ -59,7 +59,7 @@ class SessionViewHolder(
             session.title
         }
 
-        nameTextView.text = session.speakersList.joinToString(separator = ", ") { speaker -> speaker.name }
+        nameTextView.text = session.speakersList.joinToString(separator = ", ") { it.name }
 
         extraSpeakersTextView.apply {
             val speakersCount = session.speakersList.count()
