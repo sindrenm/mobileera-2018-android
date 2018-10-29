@@ -1,10 +1,9 @@
 package rocks.mobileera.mobileera.adapters.viewHolders
 
 import android.content.Context
-import android.content.res.Resources
 import android.net.Uri
 import android.support.v4.content.res.ResourcesCompat
-import android.support.v4.graphics.drawable.DrawableCompat
+import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.widget.ImageButton
@@ -17,12 +16,11 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.row_session.view.*
 import rocks.mobileera.mobileera.R
 import rocks.mobileera.mobileera.adapters.TagsAdapter
+import rocks.mobileera.mobileera.adapters.interfaces.AddToFavoritesCallback
 import rocks.mobileera.mobileera.adapters.interfaces.TagCallback
 import rocks.mobileera.mobileera.model.Session
 import rocks.mobileera.mobileera.utils.CircleTransform
 import rocks.mobileera.mobileera.utils.Preferences.Companion.domain
-import android.support.v7.widget.DividerItemDecoration
-import rocks.mobileera.mobileera.adapters.interfaces.AddToFavoritesCallback
 
 class SessionViewHolder(
     val view: View,
@@ -156,17 +154,29 @@ class SessionViewHolder(
     }
 
     private fun setAvatar(session: Session) {
-        session.speakersList.firstOrNull()?.photoUrl?.let { photoUrl ->
-            Picasso.get().load(Uri.parse(domain + photoUrl)).transform(CircleTransform()).into(avatarImageView)
-        } ?: run {
-            session.image?.let {sessionUrl ->
-                if (sessionUrl.isEmpty()) {
+        val speaker = session.speakersList.firstOrNull()
+
+        when {
+            speaker != null -> {
+                Picasso.get()
+                    .load(Uri.parse(domain + speaker.photoUrl))
+                    .transform(CircleTransform())
+                    .into(avatarImageView)
+            }
+            session.image != null -> {
+                val sessionUrl = session.image
+
+                if (sessionUrl.isNullOrEmpty()) {
                     avatarImageView.setImageResource(android.R.color.transparent)
                     return
                 }
 
-                Picasso.get().load(Uri.parse(domain + sessionUrl)).transform(CircleTransform()).into(avatarImageView)
-            } ?: run {
+                Picasso.get()
+                    .load(Uri.parse(domain + sessionUrl))
+                    .transform(CircleTransform())
+                    .into(avatarImageView)
+            }
+            else -> {
                 avatarImageView.setImageResource(android.R.color.transparent)
             }
         }
