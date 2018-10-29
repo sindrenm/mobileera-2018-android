@@ -50,9 +50,9 @@ class SessionViewHolder(val view: View,  private val tagsListener: TagCallback?,
         session ?: return
 
         titleTextView.text = (session.title + (if (session.lightning == true) " ⚡" else ""))
-        nameTextView.text = session.speakersList?.joinToString(separator = ", ") { speaker -> speaker.name }
+        nameTextView.text = session.speakersList.joinToString(separator = ", ") { speaker -> speaker.name }
 
-        session.speakersList?.count()?.let {speakersCount ->
+        session.speakersList.count().let { speakersCount ->
             extraSpeakersTextView.visibility = (if (speakersCount < 2) View.GONE else View.VISIBLE)
             extraSpeakersTextView.text = ("+" + (speakersCount - 1))
         }
@@ -129,8 +129,7 @@ class SessionViewHolder(val view: View,  private val tagsListener: TagCallback?,
     }
 
     private fun setAvatar(session: Session) {
-        session.speakersList?.firstOrNull()?.photoUrl?.let {photoUrl ->
-
+        session.speakersList.firstOrNull()?.photoUrl?.let { photoUrl ->
             Picasso.get().load(Uri.parse(domain + photoUrl)).transform(CircleTransform()).into(avatarImageView)
         } ?: run {
             session.image?.let {sessionUrl ->
