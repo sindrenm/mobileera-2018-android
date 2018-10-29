@@ -80,26 +80,23 @@ class SessionViewHolder(
             return
         }
 
-        session.tags?.let {tags ->
-            if (tags.isEmpty()) {
-                tagsRecyclerView.visibility = View.GONE
-                return
-            }
-
-            tagsRecyclerView.visibility = View.VISIBLE
-
-            tagsRecyclerView.layoutManager = FlexboxLayoutManager(context).apply {
-                flexDirection = FlexDirection.ROW_REVERSE
-                justifyContent = JustifyContent.FLEX_END
-            }
-
-            tagsRecyclerView.adapter = TagsAdapter(tags, tagsListener)
-
-            val dividerItemDecoration = DividerItemDecoration(context,
-                    RecyclerView.VERTICAL)
-            dividerItemDecoration.setDrawable(context.resources.getDrawable(R.drawable.divirer_tags_horizontal))
-            tagsRecyclerView.addItemDecoration(dividerItemDecoration)
+        if (session.tags.isEmpty()) {
+            tagsRecyclerView.visibility = View.GONE
+            return
         }
+
+        tagsRecyclerView.visibility = View.VISIBLE
+
+        tagsRecyclerView.layoutManager = FlexboxLayoutManager(context).apply {
+            flexDirection = FlexDirection.ROW_REVERSE
+            justifyContent = JustifyContent.FLEX_END
+        }
+
+        tagsRecyclerView.adapter = TagsAdapter(session.tags, tagsListener)
+
+        val dividerItemDecoration = DividerItemDecoration(context, RecyclerView.VERTICAL)
+        dividerItemDecoration.setDrawable(context.resources.getDrawable(R.drawable.divirer_tags_horizontal))
+        tagsRecyclerView.addItemDecoration(dividerItemDecoration)
     }
 
     private fun setTrack(session: Session, track: Int) {

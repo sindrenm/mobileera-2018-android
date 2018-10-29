@@ -17,7 +17,7 @@ class Session {
     var lightning: Boolean? = null
     var speakers: List<String> = ArrayList()
     var speakersList: List<Speaker> = ArrayList()
-    var tags: List<String>? = ArrayList()
+    var tags: List<String> = ArrayList()
     var price: String? = null
 
     var startDate: Date? = null
