@@ -26,6 +26,12 @@ class SessionViewHolder(
     private val tagsListener: TagCallback?,
     private val addToFavoritesListener: AddToFavoritesCallback?
 ) : RecyclerView.ViewHolder(view) {
+    companion object {
+        const val TRACK_ODIN = 0
+        const val TRACK_FREYJA = 1
+        const val TRACK_THOR = 2
+    }
+
     private val titleTextView: TextView = view.titleTextView
     private val nameTextView: TextView = view.nameTextView
     private val avatarImageView: ImageView = view.avatarImageView
@@ -108,17 +114,17 @@ class SessionViewHolder(
         }
 
         when (track) {
-            0 -> {
+            TRACK_ODIN -> {
                 colorBarView.setBackgroundResource(R.color.colorOdin)
                 roomTextView.setText(R.string.odin)
             }
 
-            1 -> {
+            TRACK_FREYJA -> {
                 colorBarView.setBackgroundResource(R.color.colorFreyja)
                 roomTextView.setText(R.string.freyja)
             }
 
-            2 -> {
+            TRACK_THOR -> {
                 colorBarView.setBackgroundResource(R.color.colorThor)
                 roomTextView.setText(R.string.thor)
             }
