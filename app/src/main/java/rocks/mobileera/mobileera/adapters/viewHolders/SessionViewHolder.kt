@@ -22,17 +22,18 @@ import android.support.v7.widget.DividerItemDecoration
 import rocks.mobileera.mobileera.adapters.interfaces.AddToFavoritesCallback
 
 class SessionViewHolder(val view: View,  private val tagsListener: TagCallback?, private val addToFavoritesListener: AddToFavoritesCallback?) : RecyclerView.ViewHolder(view) {
-    val titleTextView: TextView = view.titleTextView
-    val nameTextView: TextView = view.nameTextView
-    val avatarImageView: ImageView = view.avatarImageView
-    val addToFavorites: ImageButton = view.addToFavoritesButton
-    val separatorNameRoomView: View = view.separatorNameRoomView
-    val colorBarView: View = view.colorBarView
-    val extraSpeakersTextView: TextView = view.extraSpeakersTextView
-    val roomTextView: TextView = view.roomTextView
-    val tagsRecyclerView: RecyclerView = view.tagsRecyclerView
+    private val titleTextView: TextView = view.titleTextView
+    private val nameTextView: TextView = view.nameTextView
+    private val avatarImageView: ImageView = view.avatarImageView
+    private val separatorNameRoomView: View = view.separatorNameRoomView
+    private val colorBarView: View = view.colorBarView
+    private val extraSpeakersTextView: TextView = view.extraSpeakersTextView
+    private val roomTextView: TextView = view.roomTextView
+    private val tagsRecyclerView: RecyclerView = view.tagsRecyclerView
 
     private val onAddToFavoritesListener: View.OnClickListener
+    private val addToFavorites: ImageButton = view.addToFavoritesButton
+
     private var session: Session? = null
 
     init {
