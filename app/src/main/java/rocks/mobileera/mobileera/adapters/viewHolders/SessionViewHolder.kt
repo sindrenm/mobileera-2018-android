@@ -21,7 +21,11 @@ import rocks.mobileera.mobileera.utils.Preferences.Companion.domain
 import android.support.v7.widget.DividerItemDecoration
 import rocks.mobileera.mobileera.adapters.interfaces.AddToFavoritesCallback
 
-class SessionViewHolder(val view: View,  private val tagsListener: TagCallback?, private val addToFavoritesListener: AddToFavoritesCallback?) : RecyclerView.ViewHolder(view) {
+class SessionViewHolder(
+    val view: View,
+    private val tagsListener: TagCallback?,
+    private val addToFavoritesListener: AddToFavoritesCallback?
+) : RecyclerView.ViewHolder(view) {
     private val titleTextView: TextView = view.titleTextView
     private val nameTextView: TextView = view.nameTextView
     private val avatarImageView: ImageView = view.avatarImageView
