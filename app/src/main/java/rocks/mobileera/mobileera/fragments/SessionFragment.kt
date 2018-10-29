@@ -23,6 +23,7 @@ import com.google.android.flexbox.FlexboxLayoutManager
 import com.google.android.flexbox.JustifyContent
 import rocks.mobileera.mobileera.adapters.TagsAdapter
 import rocks.mobileera.mobileera.adapters.interfaces.SpeakerCallback
+import rocks.mobileera.mobileera.utils.favoriteIconResForSession
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -83,7 +84,7 @@ class SessionFragment : Fragment() {
     override fun onPrepareOptionsMenu(menu: Menu?) {
         super.onPrepareOptionsMenu(menu)
         activity?.applicationContext?.let {
-            menu?.findItem(R.id.btnAddToFavorites)?.setIcon( if (session?.isFavorite(it) == false) R.drawable.star_filled else R.drawable.star_empty)
+            menu?.findItem(R.id.btnAddToFavorites)?.setIcon(favoriteIconResForSession(session, it))
         }
     }
 
@@ -92,7 +93,7 @@ class SessionFragment : Fragment() {
             R.id.btnAddToFavorites -> {
                 activity?.applicationContext?.let {
                     session?.toggleFavorites(it)
-                    item.setIcon(if (session?.isFavorite(it) == false) R.drawable.star_filled else R.drawable.star_empty)
+                    item.setIcon(favoriteIconResForSession(session, it))
                 }
             }
 
