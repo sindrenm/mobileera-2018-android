@@ -53,12 +53,19 @@ class SessionViewHolder(
         context ?: return
         session ?: return
 
-        titleTextView.text = (session.title + (if (session.lightning == true) " ⚡" else ""))
+        titleTextView.text = if (session.lightning == true) {
+            context.getString(R.string.session_name_lightning, session.title)
+        } else {
+            session.title
+        }
+
         nameTextView.text = session.speakersList.joinToString(separator = ", ") { speaker -> speaker.name }
 
-        session.speakersList.count().let { speakersCount ->
-            extraSpeakersTextView.visibility = (if (speakersCount < 2) View.GONE else View.VISIBLE)
-            extraSpeakersTextView.text = ("+" + (speakersCount - 1))
+        extraSpeakersTextView.apply {
+            val speakersCount = session.speakersList.count()
+
+            visibility = if (speakersCount < 2) View.GONE else View.VISIBLE
+            text = context.getString(R.string.speakers_plus_one, speakersCount - 1)
         }
 
         setFavoritesButton(context, session)

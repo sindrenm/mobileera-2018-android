@@ -29,4 +29,7 @@
     <string name="mobile_era_team">Mobile Era Team</string>
     <string name="contact_us">Contact us</string>
     <string name="creds">Developed with ❤️\nKonstantin Loginov (loginov.k@gmail.com)</string>
+
+    <string name="speakers_plus_one">+%d</string>
+    <string name="session_name_lightning">%s ⚡</string>
 </resources>
