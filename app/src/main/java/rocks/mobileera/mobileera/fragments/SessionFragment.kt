@@ -180,7 +180,7 @@ class SessionFragment : Fragment() {
         }
 
         speaker1Layout.tag = 0
-        speaker2Layout.tag = 0
+        speaker2Layout.tag = 1
         speaker1Layout.setOnClickListener(onClickListener)
         speaker2Layout.setOnClickListener(onClickListener)
     }
